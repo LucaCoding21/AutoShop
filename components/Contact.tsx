@@ -24,8 +24,8 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-lg">Our Shop</h4>
-                  <p className="text-slate-600">Surrey, British Columbia, Canada</p>
-                  <p className="text-slate-500 text-sm mt-1">Conveniently accessible from King George Blvd</p>
+                  <p className="text-slate-600">10304 152A St, Surrey, BC V3R 7P6</p>
+                  <a href="https://maps.google.com/?q=10304+152A+St,+Surrey,+BC+V3R+7P6" target="_blank" rel="noopener noreferrer" className="text-maple-red text-sm mt-1 hover:underline">Get Directions</a>
                 </div>
               </div>
 
@@ -47,8 +47,8 @@ export const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-bold text-slate-900 text-lg">Hours</h4>
                   <ul className="text-slate-600 space-y-1">
-                    <li className="flex justify-between w-40"><span>Mon - Fri:</span> <span>8:30 AM - 5:30 PM</span></li>
-                    <li className="flex justify-between w-40"><span>Saturday:</span> <span>9:00 AM - 4:00 PM</span></li>
+                    <li className="flex justify-between w-40"><span>Mon - Fri:</span> <span>9:00 AM - 5:00 PM</span></li>
+                    <li className="flex justify-between w-40"><span>Saturday:</span> <span>Closed</span></li>
                     <li className="flex justify-between w-40"><span>Sunday:</span> <span>Closed</span></li>
                   </ul>
                 </div>

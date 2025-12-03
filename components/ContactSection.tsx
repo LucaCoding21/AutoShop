@@ -6,26 +6,26 @@ export const ContactSection: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone',
-      primary: '(604) 555-0199',
-      secondary: 'Mon-Fri 8am-6pm',
+      primary: '(604) 957-1950',
+      secondary: 'Mon-Fri 9am-5pm',
     },
     {
       icon: Mail,
       title: 'Email',
-      primary: 'info@precisionglass.ca',
+      primary: 'info@mapleautoglass.ca',
       secondary: '24/7 Online Support',
     },
     {
       icon: MapPin,
       title: 'Location',
-      primary: '2450 Main Street',
-      secondary: 'Vancouver, BC V5T 3E2',
+      primary: '10304 152A St',
+      secondary: 'Surrey, BC V3R 7P6',
     },
     {
       icon: Clock,
       title: 'Hours',
-      primary: 'Mon - Sat: 8:00 - 18:00',
-      secondary: 'Sunday: Closed',
+      primary: 'Mon - Fri: 9:00 AM - 5:00 PM',
+      secondary: 'Sat-Sun: Closed',
     },
   ];
 
@@ -64,7 +64,7 @@ export const ContactSection: React.FC = () => {
         {/* Map Area */}
         <div className="mt-16 w-full h-96 bg-gray-200 rounded-2xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5076870898677!2d-123.10167492357627!3d49.26510647138789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d0a3d5a12d%3A0x6f8f3e3f8f8f8f8f!2s2450%20Main%20St%2C%20Vancouver%2C%20BC!5e0!3m2!1sen!2sca!4v1699999999999!5m2!1sen!2sca"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.8!2d-122.8!3d49.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9a0b0c0c0c1%3A0x1234567890abcdef!2s10304%20152A%20St%2C%20Surrey%2C%20BC%20V3R%207P6!5e0!3m2!1sen!2sca!4v1699999999999!5m2!1sen!2sca"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -78,7 +78,7 @@ export const ContactSection: React.FC = () => {
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="bg-white px-6 py-4 rounded-xl shadow-lg flex items-center space-x-3 animate-bounce">
               <MapPin className="text-red-600" size={24} fill="currentColor" />
-              <span className="font-bold text-gray-900">Locally Owned in Vancouver</span>
+              <span className="font-bold text-gray-900">Locally Owned in Surrey</span>
             </div>
           </div>
         </div>

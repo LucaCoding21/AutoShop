@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="text-right">
-             <p className="text-slate-500 text-sm">Serving the Lower Mainland</p>
-             <p className="text-white font-bold">Surrey, BC</p>
+             <p className="text-slate-500 text-sm">10304 152A St, Surrey, BC V3R 7P6</p>
+             <p className="text-white font-bold">Mon-Fri: 9AM - 5PM</p>
         </div>
       </div>
     </footer>
