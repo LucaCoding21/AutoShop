@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Clock, Car, Info, Calendar } from 'lucide-react';
 
 export const BookAppointment: React.FC = () => {
@@ -10,8 +11,8 @@ export const BookAppointment: React.FC = () => {
     },
     {
       icon: Car,
-      title: 'We Come to You',
-      description: 'Mobile service available at your home or work.',
+      title: 'All Makes & Models',
+      description: 'We service cars, trucks, SUVs, and commercial vehicles.',
     },
     {
       icon: Info,
@@ -21,11 +22,17 @@ export const BookAppointment: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-red-600">
+    <section className="py-24 bg-red-600 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Left Column - Info */}
-          <div className="w-full lg:w-5/12 text-white">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="w-full lg:w-5/12 text-white"
+          >
             <span className="text-white/80 font-semibold tracking-wider uppercase text-sm mb-3 block">
               Book an Appointment
             </span>
@@ -38,7 +45,14 @@ export const BookAppointment: React.FC = () => {
             {/* Feature cards */}
             <div className="space-y-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
                   <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
                     <feature.icon className="text-white" size={24} />
                   </div>
@@ -46,13 +60,19 @@ export const BookAppointment: React.FC = () => {
                     <h4 className="font-bold text-lg mb-1">{feature.title}</h4>
                     <p className="text-red-100 text-sm">{feature.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column - Form */}
-          <div className="w-full lg:w-7/12">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="w-full lg:w-7/12"
+          >
             <div className="bg-white p-8 md:p-10 rounded-2xl shadow-2xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Request Service</h3>
 
@@ -141,15 +161,17 @@ export const BookAppointment: React.FC = () => {
                 </div>
 
                 {/* Submit Button */}
-                <button
+                <motion.button
                   type="submit"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   className="w-full py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-600/20"
                 >
                   Schedule Appointment
-                </button>
+                </motion.button>
               </form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
